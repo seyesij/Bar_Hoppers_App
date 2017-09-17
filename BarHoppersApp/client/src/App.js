@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
@@ -16,6 +17,7 @@ class App extends Component {
     this.state = {
       auth: false,
       user: null,
+      redirect: false,
     }
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
@@ -32,6 +34,7 @@ class App extends Component {
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
+        redirect: true
       });
      }).catch(err => console.log(err));
   }
@@ -48,6 +51,7 @@ class App extends Component {
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
+        redirect: true
       });
     }).catch(err => console.log(err));
   }
@@ -57,6 +61,7 @@ class App extends Component {
       .then(res => {
         this.setState({
           auth: false,
+          redirect: true
         });
       }).catch(err => console.log(err));
   }
@@ -77,6 +82,7 @@ class App extends Component {
         <Route exact path='/register' render={() => <Register
           handleRegisterSubmit={this.handleRegisterSubmit}
           /> } />
+          {this.state.redirect ? <Redirect push to={'/'} /> : ''}
       </div>
      </Router>
     );
