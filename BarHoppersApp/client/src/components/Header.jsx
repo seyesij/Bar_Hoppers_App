@@ -17,6 +17,9 @@ const Header = (props) => {
                 <NavLink exact to='/login'><h3>login</h3></NavLink>
               </li>
               <li>
+                <NavLink exact to='/profile'><h3>profile</h3></NavLink>
+              </li>
+              <li>
                 <NavLink exact to='/'><h3>home</h3></NavLink>
               </li>
             </ul>
