@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Login from './components/Login';
 import Register from './components/Register';
+import Profile from './components/Profile';
 
 class App extends Component {
   constructor() {
@@ -81,6 +82,9 @@ class App extends Component {
           /> } />
         <Route exact path='/register' render={() => <Register
           handleRegisterSubmit={this.handleRegisterSubmit}
+          /> } />
+        <Route exact path='/profile' render={() => <Profile
+          user={this.state.user}
           /> } />
           {this.state.redirect ? <Redirect push to={'/'} /> : ''}
       </div>
