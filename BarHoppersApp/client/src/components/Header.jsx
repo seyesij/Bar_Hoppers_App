@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = (props) => {
   return(
@@ -6,9 +7,18 @@ const Header = (props) => {
           <div className="navBar">
             <ul>
               <h1>Bar Hoppers</h1>
-              <li><h3>REGISTER</h3></li>
-              <li><h3>SIGN IN</h3></li>
-              <li><h3>HOME</h3></li>
+              <li onClick={props.logOut}>
+                <Link to='/'><h3>logout</h3></Link>
+              </li>
+              <li>
+                <NavLink exact to='/register'><h3>register</h3></NavLink>
+              </li>
+              <li>
+                <NavLink exact to='/login'><h3>login</h3></NavLink>
+              </li>
+              <li>
+                <NavLink exact to='/'><h3>home</h3></NavLink>
+              </li>
             </ul>
           </div>
     </header>
