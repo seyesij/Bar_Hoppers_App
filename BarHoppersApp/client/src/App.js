@@ -60,9 +60,10 @@ class App extends Component {
   logOut() {
     axios.get('/auth/logout')
       .then(res => {
+        console.log(res);
         this.setState({
           auth: false,
-          redirect: true
+          redirect: false
         });
       }).catch(err => console.log(err));
   }
