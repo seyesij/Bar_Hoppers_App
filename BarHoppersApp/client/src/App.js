@@ -19,10 +19,31 @@ class App extends Component {
       auth: false,
       user: null,
       redirect: false,
+      search: null,
+      searchResults: null,
+      searchDataLoaded: false,
     }
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
     this.logOut = this.logOut.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.inputSearch = this.inputSearch.bind(this);
+  }
+
+//Search
+  handleSearch() {
+    axios.get(`https://api.barzz.net/api/search?zip=${this.state.search}&user_key=9cc3ebaf5b091c716c3b42da23413ca9`)
+    .then(res => {
+      this.setState({
+        searchResults: res.data,
+        searchDataLoaded: true
+      })
+    })
+    .catch(err => console.log(err))
+  }
+
+  inputSearch(e){
+    this.setState({search: e.target.value})
   }
 
 //Auth
