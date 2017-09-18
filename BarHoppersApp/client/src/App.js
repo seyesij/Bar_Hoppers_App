@@ -11,6 +11,7 @@ import Homepage from './components/Homepage';
 import Login from './components/Login';
 import Register from './components/Register';
 import Profile from './components/Profile';
+import SearchResults from './components/SearchResults';
 
 class App extends Component {
   constructor() {
