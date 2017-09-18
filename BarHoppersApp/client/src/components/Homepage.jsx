@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Homepage extends Component {
 
@@ -9,8 +10,10 @@ class Homepage extends Component {
             <h2 className="barHeading">Find your next bar spot!</h2>
               <form className="search">
                 <div className="searchform">
-                  <input type="text" placeholder="Enter zipcode"/>
-                  <button onClick="" type="submit">Search</button>
+                  <input onChange={this.props.inputSearch} type="text" placeholder="Enter zipcode"/>
+                  <Link to='/results'>
+                    <button onClick={() => this.props.handleSearch()} type="submit">Search</button>
+                  </Link>
                 </div>
               </form>
           </div>
