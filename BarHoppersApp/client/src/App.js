@@ -75,6 +75,7 @@ class App extends Component {
       <div className="App">
         <Header
           logOut={this.logOut}
+          auth={this.state.auth}
         />
         <Route exact path='/' render={() => <Homepage
           /> } />
