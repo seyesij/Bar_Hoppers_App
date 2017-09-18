@@ -99,6 +99,9 @@ class App extends Component {
           auth={this.state.auth}
         />
         <Route exact path='/' render={() => <Homepage
+          inputSearch={this.inputSearch}
+          handleSearch={this.handleSearch}
+          searchResults={this.state.searchResults}
           /> } />
         <Route exact path='/login' render={() => <Login
           handleLoginSubmit={this.handleLoginSubmit}
