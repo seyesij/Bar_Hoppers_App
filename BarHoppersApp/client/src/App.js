@@ -113,6 +113,10 @@ class App extends Component {
         <Route exact path='/profile' render={() => <Profile
           user={this.state.user}
           /> } />
+        <Route exact path='/results' render={() => <SearchResults
+          dataLoaded={this.state.searchDataLoaded}
+          searchResults={this.state.searchResults}
+          /> } />
           {this.state.redirect ? <Redirect push to={'/'} /> : ''}
       </div>
      </Router>
