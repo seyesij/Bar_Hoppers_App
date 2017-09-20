@@ -8,19 +8,19 @@ const Header = (props) => {
             <ul>
               <h1>Bar Hoppers</h1>
               {props.auth
-                ? <li onClick={props.logOut}><Link to='/'><h3>logout</h3></Link></li>
+                ? <li onClick={props.logOut}><Link className="navlink" to='/'><h3>logout</h3></Link></li>
                 : ''}
               {!props.auth
-                ? <li><NavLink exact to='/register'><h3>register</h3></NavLink></li>
+                ? <li><NavLink className="navlink" exact to='/register'><h3>register</h3></NavLink></li>
                 : ''}
               {!props.auth
-                ? <li><NavLink exact to='/login'><h3>login</h3></NavLink></li>
+                ? <li><NavLink className="navlink" exact to='/login'><h3>login</h3></NavLink></li>
                 : ''}
               {props.auth
-                ?<li><NavLink exact to='/profile'><h3>profile</h3></NavLink></li>
+                ?<li><NavLink className="navlink" exact to='/profile'><h3>profile</h3></NavLink></li>
                 : ''}
               <li>
-                <NavLink exact to='/'><h3>home</h3></NavLink>
+                <NavLink className="navlink" exact to='/'><h3>home</h3></NavLink>
               </li>
             </ul>
           </div>
