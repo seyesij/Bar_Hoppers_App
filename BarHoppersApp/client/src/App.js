@@ -112,6 +112,7 @@ class App extends Component {
         user: res.data.user,
         redirect: true
       });
+      this.getUsersBars(res.data.user.id);
      }).catch(err => console.log(err));
   }
 
@@ -129,6 +130,7 @@ class App extends Component {
         user: res.data.user,
         redirect: true
       });
+      this.getUsersBars(res.data.user.id);
     }).catch(err => console.log(err));
   }
 
