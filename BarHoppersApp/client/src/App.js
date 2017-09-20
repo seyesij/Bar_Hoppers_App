@@ -178,6 +178,10 @@ class App extends Component {
         <Route exact path='/bar' render={() => <SingleBarPage
           barData={this.state.barData}
           barLoaded={this.state.barDataLoaded}
+          addFavorite={this.addFavorite}
+          auth={this.state.auth}
+          usersBars={this.state.usersBars}
+          getBarData={this.getBarData}
           /> } />
           {this.state.redirect ? <Redirect push to={'/'} /> : ''}
       </div>
