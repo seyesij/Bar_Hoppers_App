@@ -34,6 +34,9 @@ class App extends Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.inputSearch = this.inputSearch.bind(this);
     this.getBarData = this.getBarData.bind(this);
+    this.getUsersBars = this.getUsersBars.bind(this);
+    this.addFavorite = this.addFavorite.bind(this);
+    this.removeFavorite = this.removeFavorite.bind(this);
   }
 
 //Search
