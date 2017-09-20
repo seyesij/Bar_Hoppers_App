@@ -7,7 +7,9 @@ class SearchResults extends Component {
       return this.props.searchResults.success.results.map((bars) => {
         return <Results
           key={bars.ID}
-          searchResults={bars} />
+          searchResults={bars}
+          barData={this.props.barData}
+          getBarData={this.props.getBarData} />
       })
     } else {
       return <h1>Loading...</h1>
