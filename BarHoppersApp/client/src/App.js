@@ -165,6 +165,9 @@ class App extends Component {
           /> } />
         <Route exact path='/profile' render={() => <Profile
           user={this.state.user}
+          getBarData={this.getBarData}
+          usersBars={this.state.usersBars}
+          removeFavorite={this.removeFavorite}
           /> } />
         <Route exact path='/results' render={() => <SearchResults
           barData={this.state.barData}
