@@ -14,10 +14,7 @@ CREATE TABLE IF NOT EXISTS bars (
   name VARCHAR(255),
   address VARCHAR(255),
   city VARCHAR(255),
-  phone VARCHAR(255),
-  website VARCHAR(255),
-  hours VARCHAR(255),
-  type VARCHAR(255),
+  zip VARCHAR(255),
   image TEXT,
   user_id INT REFERENCES users(id)
 );
