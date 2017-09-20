@@ -45,4 +45,5 @@
 
 -	Add more search functions including search by name, state, city
 -	Add local/session storage
-- Improve css
+-   Improve css
+-   Fix minor bugs
