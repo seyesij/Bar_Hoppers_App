@@ -23,12 +23,15 @@ class App extends Component {
       search: null,
       searchResults: null,
       searchDataLoaded: false,
+      barData: '',
+      barDataLoaded: false,
     }
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
     this.logOut = this.logOut.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.inputSearch = this.inputSearch.bind(this);
+    this.getBarData = this.getBarData.bind(this);
   }
 
 //Search
@@ -45,6 +48,17 @@ class App extends Component {
 
   inputSearch(e){
     this.setState({search: e.target.value})
+  }
+
+//singlepage
+  getBarData(name, zip) {
+    axios.get(`https://api.barzz.net/api/business?name=${name}&zip=${zip}&user_key=9cc3ebaf5b091c716c3b42da23413ca9`)
+      .then(res => {
+        this.setState({
+          barData: res.data.success.results[0],
+          barDataLoaded: true,
+        })
+      }).catch(err => console.log(err))
   }
 
 //Auth
@@ -114,8 +128,14 @@ class App extends Component {
           user={this.state.user}
           /> } />
         <Route exact path='/results' render={() => <SearchResults
-          dataLoaded={this.state.searchDataLoaded}
+          barData={this.state.barData}
           searchResults={this.state.searchResults}
+          getBarData={this.getBarData}
+          dataLoaded={this.state.searchDataLoaded}
+          /> } />
+        <Route exact path='/bar' render={() => <SingleBarPage
+          barData={this.state.barData}
+          barLoaded={this.state.barDataLoaded}
           /> } />
           {this.state.redirect ? <Redirect push to={'/'} /> : ''}
       </div>
