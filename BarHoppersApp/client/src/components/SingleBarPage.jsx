@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SingleBarPage extends Component {
 
@@ -26,6 +27,11 @@ class SingleBarPage extends Component {
             <p><span>Dress Code: </span>{this.props.barData.Dress_Code}</p>
             <p><span>Payment Options: </span>{this.props.barData.Payment_Options}</p>
             <p><span>Hours of Operation: </span>{this.props.barData.Hours}</p>
+            {this.props.auth
+              ? <Link to='/profile'>
+              <button className="fav" onClick={() => this.props.addFavorite()}>Favorite</button>
+                </Link>
+              : ''}
           </div>
        </div>
        </div>
