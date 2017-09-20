@@ -3,6 +3,7 @@
   margin: 0px;
 }
 
+/*Homepage*/
 .home {
   height: 100vh;
   background-image: url("http://cdn.funcheap.com/wp-content/uploads/2016/11/2bfcacf2-c580-4b60-aa95-8b5616d5c3501.jpg");
@@ -12,6 +13,49 @@
 
 .header {
   width: 100%;
+}
+
+.barHeading {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: #88cc00;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.searchbox {
+  width: 800px;
+  height: 200px;
+  background-color: white;
+  margin: 220px auto 0px auto;
+  border: 2px solid #f2f2f2;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.searchform {
+  margin: auto;
+  width: 400px;
+}
+
+.searchform input[type=text], .searchform input[type=text] {
+  margin-top: 35px;
+  margin-right: 30px;
+  margin-left: 40px;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1px solid grey;
+}
+
+.searchform button[type=submit], .searchform button[type=submit] {
+  background-color: #88cc00;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5px;
 }
 
 /*navbar*/
@@ -91,54 +135,6 @@ height: 9px;
   font-family: 'Bungee Shade', cursive;
 }
 
-/*Search*/
-.searchbox {
-  width: 800px;
-  height: 200px;
-  background-color: white;
-  margin: 220px auto 0px auto;
-  border: 2px solid #f2f2f2;
-  border-radius: 20px;
-  opacity: 0.8;
-}
-
-.barHeading {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 35px;
-  color: #88cc00;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.search {
-}
-
-.searchform {
-  margin: auto;
-  width: 400px;
-}
-
-.searchform input[type=text], .searchform input[type=text] {
-  margin-top: 35px;
-  margin-right: 30px;
-  margin-left: 40px;
-  padding: 14px 18px;
-  font-size: 16px;
-  border: 1px solid grey;
-}
-
-.searchform button[type=submit], .searchform button[type=submit] {
-  background-color: #88cc00;
-  padding: 8px 12px;
-  font-size: 16px;
-  color: white;
-  font-weight: 900;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 5px;
-}
-
-
 /*Auth*/
 .login-container, .register-container {
   background-color: white;
@@ -212,7 +208,6 @@ height: 9px;
   transition: 0.3s;
   margin-top: 5px;
 }
-
 
 /*Search Results*/
 .bars{
@@ -333,6 +328,77 @@ span {
   margin-bottom: 12px;
   font-family: times new roman;
 }
+
+.fav{
+  color: white;
+  border-radius: 4px;
+  background: #B5222D;
+  width: 70px;
+  height: 25px;
+}
+
+/*Profile*/
+.profilecontainer2 {
+  display: flex;
+  max-height: 600px;
+  margin: auto;
+  max-width: 1000px;
+  margin-top: 30px;
+  border: 2px solid grey;
+  box-shadow: 1px 1px 25px 10px grey;
+}
+
+.profilecontainer1 h2{
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 30px;
+}
+
+.profile{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 1100px;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.bar {
+  height: 200px;
+  margin-top: 10px;
+  border: 2px solid white;
+}
+
+.bar img {
+  width: 200px;
+  height: 150px;
+}
+
+.bar h3{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+}
+
+.favinfo{
+  display: flex;
+  background: white;
+}
+
+.favinfo button{
+  color: black;
+  background: ;
+  height: 20px;
+  width: 65px;
+}
+.favinfo p {
+  font-size: 15px;
+  font-family: 'Imprima', sans-serif;
+  font-weight: normal;
+  flex-grow: 1;
+  color: #88cc00;
+}
+
 
 
 
