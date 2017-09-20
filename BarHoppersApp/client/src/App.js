@@ -20,6 +20,7 @@ class App extends Component {
     this.state = {
       auth: false,
       user: null,
+      usersBars: null,
       redirect: false,
       search: null,
       searchResults: null,
@@ -60,6 +61,40 @@ class App extends Component {
           barDataLoaded: true,
         })
       }).catch(err => console.log(err))
+  }
+
+//UserFavorites
+  getUsersBars(userid){
+    console.log('here');
+    axios.get(`/profile/${userid}`)
+    .then(res =>{
+      this.setState({
+        usersBars: res.data
+      })
+    })
+  }
+
+  addFavorite(){
+    axios.post('/profile', {
+      name: this.state.barData.Name,
+      address: this.state.barData.Address,
+      city: this.state.barData.City,
+      zip: this.state.barData.Zip,
+      image: this.state.barData.Bar_Image,
+    })
+    .then(res => {
+      this.getUsersBars(this.state.user.id)
+    })
+    .catch(err => console.log(err));
+  }
+
+  removeFavorite(id){
+    axios.delete(`/profile/${id}`,{
+        id,
+    }).then(res => {
+      this.getUsersBars(this.state.user.id)
+    })
+    .catch(err => console.log(err));
   }
 
 //Auth
