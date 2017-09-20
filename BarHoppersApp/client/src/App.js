@@ -12,6 +12,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Profile from './components/Profile';
 import SearchResults from './components/SearchResults';
+import SingleBarPage from './components/SingleBarPage';
 
 class App extends Component {
   constructor() {
