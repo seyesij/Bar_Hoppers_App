@@ -17,7 +17,7 @@ class SearchResults extends Component {
   render(){
     return (
       <div className="searchpage">
-        <h1 className="pageTitle">🍹 Bars In This Area 🍹</h1>
+        <h1 className="pageTitle">Top Bars In This Area</h1>
         <div className='searchResults'>
           {this.renderSearch()}
         </div>
