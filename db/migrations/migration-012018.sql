@@ -1,4 +1,4 @@
-\c bar_hoppers_dev;
+-- \c bar_hoppers_dev;
 
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
