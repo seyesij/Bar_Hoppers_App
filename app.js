@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 
 //Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const authRoutes = require('./routes/auth-routes');
