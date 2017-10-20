@@ -21,7 +21,7 @@ app.use(session({
   }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static('public'));
 
 
 const PORT = process.env.PORT || 3001;
@@ -30,8 +30,8 @@ app.listen(PORT, () => {
 });
 
 //Routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const authRoutes = require('./routes/auth-routes');
