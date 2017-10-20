@@ -41,7 +41,7 @@ class App extends Component {
 
 //Search
   handleSearch() {
-    axios.get(`https://api.barzz.net/api/search?zip=${this.state.search}&user_key=9cc3ebaf5b091c716c3b42da23413ca9`)
+    axios.get(`https://thingproxy.freeboard.io/fetch/https://api.barzz.net/api/search?zip=${this.state.search}&user_key=9cc3ebaf5b091c716c3b42da23413ca9`)
     .then(res => {
       this.setState({
         searchResults: res.data,
@@ -57,7 +57,7 @@ class App extends Component {
 
 //singlepage
   getBarData(name, zip) {
-    axios.get(`https://api.barzz.net/api/business?name=${name}&zip=${zip}&user_key=9cc3ebaf5b091c716c3b42da23413ca9`)
+    axios.get(`https://thingproxy.freeboard.io/fetch/https://api.barzz.net/api/business?name=${name}&zip=${zip}&user_key=9cc3ebaf5b091c716c3b42da23413ca9`)
       .then(res => {
         this.setState({
           barData: res.data.success.results[0],
