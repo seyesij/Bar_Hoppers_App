@@ -24,7 +24,7 @@
 }
 
 .searchbox {
-  width: 800px;
+  max-width: 800px;
   height: 200px;
   background-color: white;
   margin: 220px auto 0px auto;
@@ -260,7 +260,7 @@ height: 9px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1100px;
+  max-width: 1100px;
   margin: auto;
   margin-top: 20px;
   padding-bottom: 40px;
@@ -404,6 +404,92 @@ span {
   flex-grow: 1;
   color: #88cc00;
 }
+
+/****MediaScreen****/
+@media screen and (max-width: 760px) {
+  .home {
+    background-size: cover;
+ }
+  .searchbox {
+    height: 140px;
+    margin-top: 180px;
+  }
+  .barHeading {
+    font-size: 25px;
+  }
+  .searchform {
+    width: 300px;
+  }
+  .searchform input[type=text], .searchform input[type=text] {
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 30px;
+    padding: 8px 0px;
+    font-size: 14px;
+  }
+  .searchform button[type=submit], .searchform button[type=submit] {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  .navBar ul h3 {
+    width: 70px;
+    font-size: 10px;
+  }
+  .navBar h1 {
+    font-size: 15px;
+    margin-left: 0px;
+    width: 50px;
+  }
+  .bars{
+    width: 220px;
+    height: 240px;
+  }
+  .barimages {
+    width: 220px;
+    height: 120px;
+  }
+  .barimage {
+    width: 220px;
+    height: 120px;
+  }
+  .pageTitle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 760px) and (min-width: 482px) {
+  .searchbox {
+    height: 150px;
+    margin-top: 180px;
+  }
+  .barHeading {
+    font-size: 30px;
+  }
+  .searchform {
+    width: 310px;
+  }
+  .searchform input[type=text], .searchform input[type=text] {
+    padding: 8px 4px;
+    font-size: 14.5px;
+    margin-left: 28px;
+  }
+  .searchform button[type=submit], .searchform button[type=submit] {
+    padding: 5px 9px;
+    font-size: 12.5px;
+  }
+  .navBar ul h3 {
+    width: 80px;
+    font-size: 12px;
+  }
+  .navBar h1 {
+    font-size: 17px;
+    width: 144px;
+  }
+  .pageTitle {
+    font-size: 25px;
+  }
+}
+
 
 
 
